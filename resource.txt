@@ -1,0 +1,39 @@
+﻿*** Settings ***
+Library  Selenium2Library
+
+
+*** Variables ***
+${BROWSER}  Firefox
+${DELAY}  0
+
+${SERVER}  http://toolbar.n4sjamk.org/
+${MainUrl}  ${SERVER}
+
+${ValidUser}  testaaja9000@hotmail.com
+${ValidPassword}  testaaja9000
+${Login}  Login
+
+
+*** Keywords ***
+Open Browser To Main Page
+    Open Browser  ${MainUrl}  ${BROWSER}
+    Set Selenium Speed  ${Delay}
+
+Go To Main Page
+    Go To  ${MainUrl}
+
+Open Log In Dialog
+    Click Element  btnLogin
+
+Input Valid Username
+    Input Text  txtLoginEmail  ${ValidUser}
+
+Input Valid Password
+    Input Text  txtLoginPassword  ${ValidPassword}
+
+Click Log In
+    Click Element  xpath=//span[contains(text(), 'Log In')]
+
+Log Out
+    Click Element  xpath=//i[contains(@class, 'fa-bars')]
+    Click Element  logout

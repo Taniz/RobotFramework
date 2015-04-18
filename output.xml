@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150418 15:53:34.115" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<suite source="/home/administrator/jotain/ryhmanjuttuja/taniz/journey.rst" id="s1" name="Journey">
+<kw type="setup" name="resource.Open Browser To Main Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${MainUrl}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150418 15:53:34.452" level="INFO">Opening browser 'Firefox' to base url 'http://toolbar.n4sjamk.org/'</msg>
+<status status="PASS" endtime="20150418 15:54:11.053" starttime="20150418 15:53:34.452"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20150418 15:54:11.070" starttime="20150418 15:54:11.065"></status>
+</kw>
+<status status="PASS" endtime="20150418 15:54:11.070" starttime="20150418 15:53:34.450"></status>
+</kw>
+<test id="s1-t1" name="Open Browser To Main Page">
+<kw type="kw" name="resource.Open Log In Dialog">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>btnLogin</arg>
+</arguments>
+<msg timestamp="20150418 15:54:11.075" level="INFO">Clicking element 'btnLogin'.</msg>
+<status status="PASS" endtime="20150418 15:54:11.700" starttime="20150418 15:54:11.074"></status>
+</kw>
+<status status="PASS" endtime="20150418 15:54:11.700" starttime="20150418 15:54:11.073"></status>
+</kw>
+<kw type="kw" name="resource.Input Valid Username">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>txtLoginEmail</arg>
+<arg>${ValidUser}</arg>
+</arguments>
+<msg timestamp="20150418 15:54:11.702" level="INFO">Typing text 'testaaja9000@hotmail.com' into text field 'txtLoginEmail'</msg>
+<status status="PASS" endtime="20150418 15:54:12.106" starttime="20150418 15:54:11.702"></status>
+</kw>
+<status status="PASS" endtime="20150418 15:54:12.106" starttime="20150418 15:54:11.701"></status>
+</kw>
+<kw type="kw" name="resource.Input Valid Password">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>txtLoginPassword</arg>
+<arg>${ValidPassword}</arg>
+</arguments>
+<msg timestamp="20150418 15:54:12.108" level="INFO">Typing text 'testaaja9000' into text field 'txtLoginPassword'</msg>
+<status status="PASS" endtime="20150418 15:54:12.868" starttime="20150418 15:54:12.107"></status>
+</kw>
+<status status="PASS" endtime="20150418 15:54:12.869" starttime="20150418 15:54:12.107"></status>
+</kw>
+<kw type="kw" name="resource.Click Log In">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(), 'Log In')]</arg>
+</arguments>
+<msg timestamp="20150418 15:54:12.871" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Log In')]'.</msg>
+<status status="PASS" endtime="20150418 15:54:13.205" starttime="20150418 15:54:12.871"></status>
+</kw>
+<status status="PASS" endtime="20150418 15:54:13.206" starttime="20150418 15:54:12.869"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150418 15:54:13.206" critical="yes" starttime="20150418 15:54:11.071"></status>
+</test>
+<doc>A resource file with reusable keywords and variables.
+This test is functionally identical to the example in
+valid_login.txt file</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150418 15:54:13.208" starttime="20150418 15:53:34.115"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Journey">Journey</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
